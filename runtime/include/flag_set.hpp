@@ -45,7 +45,7 @@ struct flag_set {
     constexpr value_type mask{static_cast<value_type>(flag)};
 
     if constexpr ((mask & (mask - 1)) !=
-                  0) {  // true, если число - не степень 2
+                  0) {
       return (m_value & mask) >> count_trailing_zeros(mask);
     } else {
       return m_value & mask ? 1 : 0;
