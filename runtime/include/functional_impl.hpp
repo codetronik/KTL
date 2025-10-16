@@ -161,7 +161,7 @@ template <class Ty>
 struct has_prefix_increment<
     Ty,
     void_t<decltype(declval<prefix_increment<> >()(declval<Ty>()))> >
-    : true_type {};  //++ применим только к l-value
+    : true_type {};
 
 template <class Ty>
 inline constexpr bool has_prefix_increment_v = has_prefix_increment<Ty>::value;
@@ -173,7 +173,7 @@ template <class Ty>
 struct has_prefix_decrement<
     Ty,
     void_t<decltype(declval<prefix_decrement<> >()(declval<Ty>()))> >
-    : true_type {};  //-- применим только к l-value
+    : true_type {};
 
 template <class Ty>
 inline constexpr bool has_prefix_decrement_v = has_prefix_decrement<Ty>::value;
@@ -185,7 +185,7 @@ template <class Ty>
 struct has_postfix_increment<
     Ty,
     void_t<decltype(declval<postfix_increment<> >()(declval<Ty>()))> >
-    : true_type {  //++ применим только к l-value
+    : true_type {
 };
 
 template <class Ty>
@@ -199,7 +199,7 @@ template <class Ty>
 struct has_postfix_decrement<
     Ty,
     void_t<decltype(declval<postfix_decrement<> >()(declval<Ty>()))> >
-    : true_type {  //-- применим только к l-value
+    : true_type {
 };
 
 template <class Ty>
