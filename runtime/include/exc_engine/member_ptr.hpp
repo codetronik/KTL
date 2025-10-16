@@ -3,7 +3,7 @@
 
 namespace ktl::crt::exc_engine {
 using uintptr_t =
-    int64_t;  // Определяем здесь во избежание конфликта с typedef'ом в vadef.h
+    int64_t;
 using offset_t = uint32_t;
 
 class member_ptr {
